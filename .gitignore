@@ -1,0 +1,17 @@
+# ไฟล์ที่ไม่ต้องการใน GitHub
+server.py
+start_ngrok*.bat
+start_ngrok*.py
+start_ngrok*.ps1
+restart_and_ngrok.bat
+
+# แต่เก็บรูปภาพและไฟล์ PWA ทั้งหมด
+!images/
+!บัตรหน้าหลัง/
+!*.html
+!*.css
+!*.js
+!*.json
+!*.md
+!.htaccess
+!sw.js
