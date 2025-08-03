@@ -22,33 +22,33 @@ DirectoryIndex index.html
 <IfModule mod_headers.c>
     # Service Worker Headers
     Header set Service-Worker-Allowed "/"
-    
+
     # Security Headers
     Header always set X-Content-Type-Options nosniff
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
-    
+
     # Cache Control สำหรับ Static Assets
     <FilesMatch "\.(png|jpg|jpeg|gif|ico|svg)$">
         Header set Cache-Control "public, max-age=86400"
         Header set Expires "access plus 1 day"
     </FilesMatch>
-    
+
     <FilesMatch "\.(css|js)$">
         Header set Cache-Control "public, max-age=3600"
         Header set Expires "access plus 1 hour"
     </FilesMatch>
-    
+
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "public, max-age=300"
         Header set Expires "access plus 5 minutes"
     </FilesMatch>
-    
+
     # Manifest และ Service Worker
     <FilesMatch "\.(webmanifest|json)$">
         Header set Cache-Control "public, max-age=0"
     </FilesMatch>
-    
+
     <FilesMatch "sw\.js$">
         Header set Cache-Control "no-cache, no-store, must-revalidate"
         Header set Pragma "no-cache"

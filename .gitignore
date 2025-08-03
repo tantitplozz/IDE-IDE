@@ -1,17 +1,14 @@
-# ไฟล์ที่ไม่ต้องการใน GitHub
-server.py
-start_ngrok*.bat
-start_ngrok*.py
-start_ngrok*.ps1
-restart_and_ngrok.bat
+# Ignore only development files that shouldn't be in production
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+node_modules/
+.env
+.vscode/
+.idea/
 
-# แต่เก็บรูปภาพและไฟล์ PWA ทั้งหมด
-!images/
-!บัตรหน้าหลัง/
-!*.html
-!*.css
-!*.js
-!*.json
-!*.md
-!.htaccess
-!sw.js
+# Keep all PWA files for GitHub Pages
+# ไฟล์เหล่านี้จำเป็นสำหรับ GitHub Pages
+# index.html, style.css, script.js, manifest.json, sw.js
+# images/, บัตรหน้าหลัง/, .htaccess
